@@ -1,0 +1,267 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f1420;
+color:#f2f6ff; /* Texte principal plus lumineux */
+}
+h1, h2, h3 {
+  color: #7ab7ff; /* Bleu clair élégant */
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(15,20,32,0.95);
+backdrop-filter:blur(5px);
+z-index:1000;
+}
+
+.navbar ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+}
+
+.btn-contact{
+border:1px solid #6bb0ff;
+padding:8px 15px;
+border-radius:20px;
+}
+
+a{
+color:#7ab7ff;
+}
+
+a:hover{
+color:#9bcaff;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4da3ff;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(15,20,32,0.7);
+}
+
+.hero-content{
+position:relative;
+text-align:center;
+max-width:800px;
+color:#d6e6ff;
+}
+
+.btn-primary{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#6bb0ff;
+color:#0f1420;
+text-decoration:none;
+border-radius:25px;
+}
+
+/* SECTIONS */
+.section{
+padding:100px 8%;
+}
+
+.bg-light{
+background:#121a2b;
+}
+
+.bg-dark{
+background:#0b0f18;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+/* LAYOUTS */
+.two-cols{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.img-cover{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:15px;
+}
+
+/* CARTES */
+.grid-2{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.card{
+background:#0b0f18;
+padding:25px;
+border-radius:12px;
+color:#e3edff; /* Texte plus clair */
+}
+
+
+/* SERVICES */
+.grid-4{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.service-card{
+background:#0b0f18;
+border-radius:12px;
+overflow:hidden;
+transition:transform .3s ease;
+}
+
+.service-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.service-card p{
+padding:10px;
+text-align:center;
+color:#dfe9ff;
+font-weight: 400;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+}
+
+/* METHODE */
+.grid-5{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
+}
+
+.step{
+background:#0b0f18;
+padding:15px;
+text-align:center;
+border-radius:10px;
+color:#e6f0ff;
+font-weight: 500;
+}
+
+
+/* PARTENAIRES */
+.partners{
+display:flex;
+justify-content:space-around;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.partners img{
+width:120px;
+filter:grayscale(100%);
+transition:.3s;
+}
+
+.partners img:hover{
+filter:grayscale(0);
+transform:scale(1.1);
+}
+
+/* CONTACT */
+.contact-box{
+text-align:center;
+background:#0b0f18;
+padding:40px;
+border-radius:15px;
+}
+
+.contact-buttons{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.whatsapp, .email{
+padding:10px 18px;
+border-radius:20px;
+text-decoration:none;
+color:white;
+}
+
+.whatsapp{background:#25D366;}
+.email{background:#6bb0ff;}
+
+/* ANIMATION AU SCROLL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease-out;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.two-cols{grid-template-columns:1fr;}
+.grid-4{grid-template-columns:repeat(2,1fr);}
+.grid-5{grid-template-columns:repeat(3,1fr);}
+}
+
+@media(max-width:600px){
+.grid-4{grid-template-columns:1fr;}
+.grid-5{grid-template-columns:1fr;}
+.navbar ul{display:none;}
+}
