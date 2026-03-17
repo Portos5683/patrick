@@ -3,151 +3,440 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Social Light</title>
-<link rel="icon" type="image/jpg" href="images/icon.jpg">
+<title>Social Light — Service à la Personne</title>
+<link rel="icon" type="image/jpg" href="images/logot.jpeg"> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">SOCIAL LIGHT</div>
-  <ul>
-    <li><a href="#apropos">À propos</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#methode">Méthode</a></li>
-    <li><a href="#partenaires">Partenaires</a></li>
-    <li><a href="#contact" class="btn-contact">Contact</a></li>
-  </ul>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">✦</span>
+  <span class="logo-social">Social</span>
+  <span class="logo-light">Light</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#temoignages">Témoignages</a></li>
+      <li><a href="#contact" class="btn-nav">Nous contacter</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<header class="hero" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80')">
-  <div class="overlay"></div>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#apropos" class="mobile-link">À propos</a></li>
+    <li><a href="#services" class="mobile-link">Services</a></li>
+    <li><a href="#methode" class="mobile-link">Méthode</a></li>
+    <li><a href="#temoignages" class="mobile-link">Témoignages</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg">
+    <img src="images/Backgroung.jpeg" alt="Hero" class="hero-img">
+    <div class="hero-overlay"></div>
+  </div>
   <div class="hero-content reveal">
-    <h1>Social Light</h1>
-    <p>Votre partenaire de confiance pour un service à la personne professionnel et durable.</p>
-    <a href="#contact" class="btn-primary">Nous contacter</a>
+    <p class="hero-tag">✦ Service à la personne au Togo</p>
+    <h1>Des équipes humaines,<br><em>pour votre quotidien.</em></h1>
+    <p class="hero-sub">Social Light sélectionne, forme et accompagne des professionnels qualifiés pour alléger votre vie familiale et professionnelle — avec rigueur, bienveillance et durabilité.</p>
+    <div class="hero-cta">
+      <a href="#services" class="btn-primary">Découvrir nos services</a>
+      <a href="#contact" class="btn-ghost">Prendre rendez-vous →</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><strong>200+</strong><span>Familles accompagnées</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><strong>5 ans</strong><span>D'expérience</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><strong>98%</strong><span>Taux de satisfaction</span></div>
   </div>
 </header>
 
-<section id="apropos" class="section reveal">
-  <div class="container two-cols">
-    <div>
-      <h2>Qui sommes-nous ?</h2>
-      <p>
-      Social Light est une structure spécialisée dans les métiers du service à la personne.  
-      Nous œuvrons pour la professionnalisation, l’encadrement et la valorisation des services  
-      destinés aux familles et aux entreprises, en mettant à leur disposition du personnel  
-      qualifié, fiable et bien formé.
-      </p>
-    </div>
-    <div>
-      <img class="img-cover"
-      src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?auto=format&fit=crop&w=800&q=80"
-      alt="Aide à domicile">
-    </div>
-  </div>
-</section>
-
-<section class="section bg-light reveal">
-  <div class="container grid-2">
-    <div class="card">
-      <h3>Notre Mission</h3>
-      <p>
-      Alléger les tâches quotidiennes des familles et des organisations afin de leur  
-      permettre de gagner en efficacité, en sérénité et en durabilité.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Notre Vision</h3>
-      <p>
-      Devenir la référence du service à la personne en Afrique francophone, grâce à la qualité  
-      de nos prestations et au professionnalisme de nos équipes.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="section reveal">
+<!-- APROPOS -->
+<section id="apropos" class="section">
   <div class="container">
-    <h2>Nos domaines d’intervention</h2>
-
-    <div class="grid-4">
-      <div class="service-card">
-        <img src="images/metier.jpg">
-        <p>Assistance à la petite enfance</p>
+    <div class="two-cols-asymm">
+      <div class="apropos-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?auto=format&fit=crop&w=800&q=80" alt="Aide à domicile" class="img-rounded">
+        <div class="img-badge">Fondée en 2019 à Kara, Togo</div>
       </div>
-
-      <div class="service-card">
-        <img src="images/agees.jpg">
-        <p>Assistance aux personnes âgées</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80">
-        <p>Assistance de vie aux familles</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80">
-        <p>Gouvernance de maison</p>
+      <div class="apropos-text reveal delay-1">
+        <p class="section-tag">Qui sommes-nous</p>
+        <h2>Une agence bâtie sur la confiance et le soin</h2>
+        <p>Social Light est née d'un constat simple : les familles togolaises manquent de solutions fiables pour trouver du personnel domestique qualifié. Nous avons voulu changer cela.</p>
+        <p>Notre agence spécialisée dans les services à la personne recrute, forme et accompagne des professionnels rigoureusement sélectionnés — disponibles pour les familles comme pour les entreprises.</p>
+        <div class="values-row">
+          <div class="value-chip">🤝 Confiance</div>
+          <div class="value-chip">📋 Rigueur</div>
+          <div class="value-chip">❤️ Bienveillance</div>
+          <div class="value-chip">🌱 Durabilité</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="methode" class="section bg-light reveal">
+<!-- MISSION & VISION -->
+<section class="section bg-warm">
   <div class="container">
-    <h2>Notre mode opératoire</h2>
-
-    <div class="grid-5">
-      <div class="step">📘 Formation</div>
-      <div class="step">🔎 Recrutement</div>
-      <div class="step">📍 Placement</div>
-      <div class="step">📊 Suivi</div>
-      <div class="step">🎯 Coaching</div>
+    <div class="mv-grid">
+      <div class="mv-card reveal">
+        <div class="mv-icon">🎯</div>
+        <h3>Notre Mission</h3>
+        <p>Alléger les responsabilités quotidiennes des familles et des organisations, pour qu'elles se concentrent sur l'essentiel — avec la certitude que leurs proches sont entre de bonnes mains.</p>
+      </div>
+      <div class="mv-card mv-card--accent reveal delay-1">
+        <div class="mv-icon">🌍</div>
+        <h3>Notre Vision</h3>
+        <p>Devenir la référence incontournable du service à la personne en Afrique francophone, en portant haut les standards de qualité, d'éthique et de professionnalisme de nos équipes.</p>
+      </div>
+      <div class="mv-card reveal delay-2">
+        <div class="mv-icon">⭐</div>
+        <h3>Nos Valeurs</h3>
+        <p>Chaque intervenant Social Light est sélectionné pour ses compétences et ses qualités humaines. Intégrité, ponctualité et discrétion ne sont pas des options — ce sont nos standards.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="partenaires" class="section reveal">
+<!-- SERVICES -->
+<section id="services" class="section">
   <div class="container">
-    <h2>Nos Partenaires</h2>
+    <div class="section-header reveal">
+      <p class="section-tag">Ce que nous offrons</p>
+      <h2>Nos domaines d'intervention</h2>
+      <p class="section-sub">Nous intervenons dans cinq domaines clés du service à la personne, avec des professionnels formés et encadrés par notre équipe.</p>
+    </div>
 
-    <div class="partners">
-      <img src="images/otr.jpg">
-      <img src="images/eco.jpg">
-      <img src="images/boa.jpg">
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-img-wrap">
+          <img src="images/metier.jpg" onerror="this.src='https://images.unsplash.com/photo-1560328055-e938bb2ed50a?auto=format&fit=crop&w=600&q=80'" alt="Petite enfance">
+          <div class="service-overlay">
+            <p>Nounou, baby-sitter, auxiliaire de puériculture certifiée, éveil et développement de l'enfant.</p>
+          </div>
+        </div>
+        <div class="service-body">
+          <span class="service-num">01</span>
+          <h3>Assistance à la petite enfance</h3>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-1">
+        <div class="service-img-wrap">
+          <img src="images/agees.jpg" onerror="this.src='https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=600&q=80'" alt="Personnes âgées">
+          <div class="service-overlay">
+            <p>Aide à domicile, accompagnement médical, stimulation cognitive, présence bienveillante.</p>
+          </div>
+        </div>
+        <div class="service-body">
+          <span class="service-num">02</span>
+          <h3>Assistance aux personnes âgées</h3>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-2">
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Familles">
+          <div class="service-overlay">
+            <p>Entretien du domicile, aide ménagère, cuisine, gestion des courses et du linge.</p>
+          </div>
+        </div>
+        <div class="service-body">
+          <span class="service-num">03</span>
+          <h3>Assistance de vie aux familles</h3>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-3">
+        <div class="service-img-wrap">
+          <img src="images/gouvernance.jpeg" alt="Gouvernante">
+          <div class="service-overlay">
+            <p>Gestion complète du foyer, supervision du personnel, organisation des événements privés.</p>
+          </div>
+        </div>
+        <div class="service-body">
+          <span class="service-num">04</span>
+          <h3>Gouvernance de maison</h3>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Soutien scolaire">
+          <div class="service-overlay">
+            <p>Répétiteurs qualifiés, aide aux devoirs, soutien scolaire de la maternelle au lycée.</p>
+          </div>
+        </div>
+        <div class="service-body">
+          <span class="service-num">05</span>
+          <h3>Soutien scolaire à domicile</h3>
+        </div>
+      </div>
+
+      <div class="service-card service-card--cta reveal delay-1">
+        <div class="service-cta-content">
+          <h3>Votre besoin n'est pas listé ?</h3>
+          <p>Nous adaptons nos services à chaque situation. Contactez-nous pour un devis personnalisé.</p>
+          <a href="#contact" class="btn-primary btn-sm">Nous écrire</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section bg-dark reveal">
-  <div class="container contact-box">
-    <h2>Contactez-nous</h2>
+<!-- METHODE -->
+<section id="methode" class="section bg-warm">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Notre processus</p>
+      <h2>Comment ça fonctionne ?</h2>
+      <p class="section-sub">Un processus rigoureux en 5 étapes pour vous garantir un service de confiance, de la sélection du candidat jusqu'au suivi après placement.</p>
+    </div>
 
-    <p>📞 <a href="tel:+22891200723">+228 91 20 07 23</a> / 
-       <a href="tel:+22898305083">+228 98 30 50 83</a>
-    </p>
-
-    <p>📧 <a href="mailto:rongafrica@gmail.com">rongafrica@gmail.com</a></p>
-    <p>📍 KARA – TOGO</p>
-
-    <div class="contact-buttons">
-      <a class="whatsapp" href="https://wa.me/22891200723" target="_blank">WhatsApp</a>
-      <a class="email" href="mailto:rongafrica@gmail.com">Email</a>
+    <div class="steps-timeline">
+      <div class="step-item reveal">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <div class="step-icon">📘</div>
+          <h3>Formation</h3>
+          <p>Chaque candidat suit une formation certifiée couvrant les compétences métier, l'hygiène, la communication et les bonnes pratiques professionnelles.</p>
+        </div>
+      </div>
+      <div class="step-item reveal delay-1">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <div class="step-icon">🔎</div>
+          <h3>Recrutement</h3>
+          <p>Entretiens approfondis, vérification des références, casier judiciaire consulté — nous ne recommandons que des profils en lesquels nous avons pleinement confiance.</p>
+        </div>
+      </div>
+      <div class="step-item reveal delay-2">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <div class="step-icon">📍</div>
+          <h3>Placement</h3>
+          <p>Mise en relation personnalisée entre le profil retenu et vos attentes spécifiques, avec un entretien tripartite avant toute prise de poste.</p>
+        </div>
+      </div>
+      <div class="step-item reveal delay-3">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <div class="step-icon">📊</div>
+          <h3>Suivi</h3>
+          <p>Évaluation régulière de la satisfaction des familles et des intervenants. Nous restons disponibles pour tout ajustement ou remplacement rapide.</p>
+        </div>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-number">05</div>
+        <div class="step-content">
+          <div class="step-icon">🎯</div>
+          <h3>Coaching</h3>
+          <p>Accompagnement continu du personnel : sessions de mise à niveau, gestion des conflits, montée en compétences pour garantir l'excellence dans la durée.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
-  © 2026 Social Light — Service à la personne
+<!-- TEMOIGNAGES -->
+<section id="temoignages" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Ce qu'ils disent</p>
+      <h2>Témoignages de nos clients</h2>
+    </div>
+    <div class="temoignages-grid">
+      <div class="temoignage reveal">
+        <div class="stars">★★★★★</div>
+        <p>« Grâce à Social Light, j'ai enfin trouvé une nounou de confiance pour mes deux enfants. Professionnelle, ponctuelle et très attachante. Je recommande vivement ! »</p>
+        <div class="temoignage-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <strong>Amina K.</strong>
+            <span>Maman de 2 enfants — Lomé</span>
+          </div>
+        </div>
+      </div>
+      <div class="temoignage reveal delay-1">
+        <div class="stars">★★★★★</div>
+        <p>« Le suivi après placement m'a vraiment surpris. Social Light ne s'arrête pas au recrutement — ils s'assurent que tout se passe bien dans la durée. C'est rare et précieux. »</p>
+        <div class="temoignage-author">
+          <div class="author-avatar">K</div>
+          <div>
+            <strong>Kodjo M.</strong>
+            <span>Directeur d'entreprise — Kara</span>
+          </div>
+        </div>
+      </div>
+      <div class="temoignage reveal delay-2">
+        <div class="stars">★★★★☆</div>
+        <p>« Mon père âgé reçoit une aide à domicile formée par Social Light depuis 8 mois. Sa qualité de vie s'est transformée. Nous sommes soulagés en tant que famille. »</p>
+        <div class="temoignage-author">
+          <div class="author-avatar">F</div>
+          <div>
+            <strong>Fatou D.</strong>
+            <span>Fille de client — Sokodé</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES -->
+<section id="partenaires" class="section bg-warm">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Ils nous font confiance</p>
+      <h2>Nos Partenaires</h2>
+    </div>
+    <div class="partners reveal">
+      <div class="partner-item">
+        <img src="images/part1.jpeg" onerror="this.src='https://via.placeholder.com/120x60/c8a97e/fff?text=REPAB'" alt="REPAB">
+      </div>
+      <div class="partner-item">
+        <img src="images/part2.jpeg" onerror="this.src='https://via.placeholder.com/120x60/c8a97e/fff?text=tulutu'" alt="tulutu">
+      </div>
+      <div class="partner-item">
+        <img src="images/part3.jpeg" onerror="this.src='https://via.placeholder.com/120x60/c8a97e/fff?text=UK'" alt="UK">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-left reveal">
+        <p class="section-tag light">Parlons-nous</p>
+        <h2>Prêt à déléguer en confiance ?</h2>
+        <p>Notre équipe est disponible pour répondre à toutes vos questions et vous proposer la solution adaptée à votre situation. Pas de contrat rigide — nous construisons ensemble la formule qui vous convient.</p>
+        <div class="contact-infos">
+          <div class="contact-info-item">
+            <span class="ci-icon">📞</span>
+            <div>
+              <strong>Téléphone</strong>
+              <a href="tel:+22891200723">+228 91 20 07 23</a>
+              <a href="tel:+22898305083">+228 98 30 50 83</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:rongafrica@gmail.com">rongafrica@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">📍</span>
+            <div>
+              <strong>Adresse</strong>
+              <span>Kara, Togo</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="https://wa.me/22891200723" target="_blank" class="btn-whatsapp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:rongafrica@gmail.com" class="btn-email">Envoyer un email</a>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal delay-1">
+        <form class="contact-form" onsubmit="handleForm(event)">
+          <h3>Formulaire de contact</h3>
+          <div class="form-group">
+            <label>Nom complet</label>
+            <input type="text" placeholder="Jean Dupont" required>
+          </div>
+          <div class="form-group">
+            <label>Email ou téléphone</label>
+            <input type="text" placeholder="votre@email.com ou +228..." required>
+          </div>
+          <div class="form-group">
+            <label>Type de service souhaité</label>
+            <select>
+              <option value="">— Choisir un service —</option>
+              <option>Assistance petite enfance</option>
+              <option>Assistance personnes âgées</option>
+              <option>Aide ménagère / famille</option>
+              <option>Gouvernante de maison</option>
+              <option>Soutien scolaire</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Votre message</label>
+            <textarea rows="4" placeholder="Décrivez votre besoin..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Envoyer ma demande →</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo">✦ Social Light</span>
+      <p>Votre partenaire de confiance pour un service à la personne professionnel, humain et durable au Togo.</p>
+    </div>
+    <div class="footer-links">
+      <strong>Navigation</strong>
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#methode">Notre méthode</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <strong>Contact</strong>
+      <a href="tel:+22891200723">+228 91 20 07 23</a>
+      <a href="tel:+22898305083">+228 98 30 50 83</a>
+      <a href="mailto:rongafrica@gmail.com">rongafrica@gmail.com</a>
+      <span>TOGO</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Social Light — Tous droits réservés. Service à la personne au Togo.</p>
+  </div>
 </footer>
 
 <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
